@@ -64,3 +64,24 @@ fileFormats = {
     "video/mpeg" : ".mpeg"
 }
 
+responseHeaders = {
+    "Accept-Ranges" : None,
+    "Server" : "myHTTP",
+    "Age" : 0,
+    "ETag" : "0",
+    "Location" : 0,
+    "Proxy-Authentication" : 0,
+    "Retry-After" : 0,
+    "WWW-Authenticate" : 0
+}
+
+entityHeaders = {
+    "Allow" : "GET, HEAD, PUT",
+    "Content-Encoding" : ["gzip", "deflate", "br"],
+    "Content-Language" : "en",
+    "Content-Length" : 0,
+    "Content-Range" : 0,
+    "Content-Type" : 0,
+    "Last-Modified" : 0,
+}
+
