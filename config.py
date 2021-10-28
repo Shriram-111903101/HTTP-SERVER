@@ -1,9 +1,12 @@
-
+import pathlib
 # Maximum number of threads
 MAX_REQ = 30
 
 # Default port
 PORT = 5000
+
+absolutePath = str(pathlib.Path().absolute())
+ROOT_PATH =  absolutePath + '/assets/'
 
 # Status Codes
 statusCodes = {
