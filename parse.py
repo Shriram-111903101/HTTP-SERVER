@@ -1,9 +1,3 @@
-import os
-from pathlib import Path
-import sys
-from config import ROOT_PATH
-import response
-
 
 def parseHeaders(data, method):
     body = []
@@ -15,12 +9,15 @@ def parseHeaders(data, method):
             if ':' in i:
                 hdrField = i[: i.index(':')]
                 hdrValues[hdrField] = i[i.index(':') + 2 : len(i) - 1]
+
             elif 'boundary' in i:
                 boundary = i[-1:i.index('=') + 1]
+
             elif '--' + boundary in i:
                 j = data.index(i)
                 body = data[j:]
                 return (hdrValues, body)
+
             else:
                 if i != '\r' and i != '\n':
                     body.append(i)
@@ -41,7 +38,6 @@ def parseHeaders(data, method):
         return hdrValues, body
 
 def parseBody(encodingType, body, method, data):
-
     if method == 'POST':
         parsedData = {}
 
@@ -64,6 +60,7 @@ def parseBody(encodingType, body, method, data):
                     parsedData[key] = value
                     key = ''
                     value = ''
+
                 elif 'Content-Disposition: form-data' in i:
                     if 'filename=' in i:
                         parsedData['isFile'] = True
@@ -75,6 +72,7 @@ def parseBody(encodingType, body, method, data):
                             parsedData['filename'] = fileName
                     key = i[i.index('=') + 2: -2]
                     value = body[body.index(i) + 2][:-1]
+
                 elif 'Content-Type' in i or 'filename' in i:
                     fileType = i[i.index(':') + 1:]
                     parsedData['fileType'] = fileType
