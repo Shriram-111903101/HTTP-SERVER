@@ -11,18 +11,25 @@ def parseHeaders(data, method):
     hdrValues = {}
     if method == 'POST':
 
-        for i in data[1:data.index('\r')]:
+        for i in data[1:]:
             if ':' in i:
                 hdrField = i[: i.index(':')]
                 hdrValues[hdrField] = i[i.index(':') + 2 : len(i) - 1]
-
-        for i in data[data.index('\r') + 1:data.index('\r', data.index('\r')+1)]:
-            body.append(i[:len(i) - 1])
-        return hdrValues, body
+            elif 'boundary' in i:
+                boundary = i[-1:i.index('=') + 1]
+            elif '--' + boundary in i:
+                j = data.index(i)
+                body = data[j:]
+                return (hdrValues, body)
+            else:
+                if i != '\r' and i != '\n':
+                    body.append(i)
+        return (hdrValues, body)
 
     elif method == 'PUT':
+        hdrValues = {}
         body = []
-        for i in data[1:data.index('\r')]:
+        for i in data[1:data]:
             if ':' in i:
                 hdrField = i[:i.index(':')]
                 hdrValues[hdrField] = i[i.index(':') : + 2 : len(i) - 1]
@@ -33,58 +40,60 @@ def parseHeaders(data, method):
 
         return hdrValues, body
 
+def parseBody(encodingType, body, method, data):
+
+    if method == 'POST':
+        parsedData = {}
+
+        if 'application/x-www-form-urlencoded' in encodingType:
+            for i in body:
+                i = i.split('&')
+                for j in i:
+                    j = j.split('=')
+                    parsedData[j[0]] = j[1]
+
+        elif 'multipart/form-data' in encodingType:
+            boundary = encodingType[encodingType.find('=') + 1:]
+            key = ''
+            value = ''
+            
+            parsedData['isFile'] = False
+
+            for i in body[1:]:
+                if '----' in i:
+                    parsedData[key] = value
+                    key = ''
+                    value = ''
+                elif 'Content-Disposition: form-data' in i:
+                    if 'filename=' in i:
+                        parsedData['isFile'] = True
+                        fileName = i[i.index('ename="') + 7:-2]
+                        j = data.index(i)
+                        headerString = '\n'.join(data[:j+2])
+                        parsedData['headerLength'] = len(headerString)
+                        if fileName != '':
+                            parsedData['filename'] = fileName
+                    key = i[i.index('=') + 2: -2]
+                    value = body[body.index(i) + 2][:-1]
+                elif 'Content-Type' in i or 'filename' in i:
+                    fileType = i[i.index(':') + 1:]
+                    parsedData['fileType'] = fileType
+                    parsedData['isFile'] = True
+                    j = data.index(i)
+                    headerString = '\n'.join(data[:j+2])
+                    parsedData['headerLength'] = len(headerString)
+
+                else:
+                    pass
+        return parsedData
+
+def parseUrl(header):
+    parsedUrl = {}
+
+    url = header.split(' ')[1]
+    for i in url[2:]. split('&'):
+        i = i.split('=')
+        parsedUrl[i[0]] = i[1]
+    return parsedUrl
+
         
-def parseGetReq(headers, clientAddr, rawData):
-    pass
-
-
-def parsePostReq(headers, clientAddr, rawData):
-    resourceLength = len(rawData)
-    headerValues, body = parseHeaders(headers, 'POST')
-    path = headers[0].split(' ')[1]
-
-    if path == '/':
-        path = ROOT_PATH
-    else:
-        path = ROOT_PATH + path
-
-    if os.path.exists(path):
-        if os.access(path, os.W_OK):
-            responseStatus = 204
-        else:
-            responseStatus = 403
-    else:
-        responseStatus = 201
-
-    bodyLength = 0
-    for i in body:
-        bodyLength += len(i)
-
-    res = response.createResponse(bodyLength, responseStatus)
-
-
-def parsePutReq(headers, clientAddr, rawData):
-    pass
-
-
-def parseDeleteReq(headers, clientAddr, rawData):
-    pass
-
-
-def parseHeadReq(headers, clientAddr, rawData):
-    pass
-
-
-req = ('POST / HTTP/1.1\r\n'+
-        'HOST: reqbin.com\r\n'+
-        'Accept: application/json\r\n'+
-        'Content-Type: application/json\r\n'+
-        'Content-Length: 12\r\n\r\n'+
-        '"ID": 78912\r\n\r\n')
-
-headers = []
-for i in req.split('\n'):
-    headers.append(i)
-
-print(headers)
-print(parseHeaders(headers, 'POST'))
