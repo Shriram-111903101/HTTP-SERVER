@@ -8,8 +8,8 @@ def getDateTime():
     date += ' GMT'
     return date
 
-def createResponse(length, code, contentType = "text/html; charset = UTF-8",
-                    lastModified = None, encodeing = "gzip"):
+def createResponse(length, code, resource=None,  
+                    lastModified = None,contentType = "text/html; charset = UTF-8",method='', encodeing = "gzip"):
 
     if code not in statusCodes.keys():
         return
