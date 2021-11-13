@@ -1,22 +1,25 @@
 import socket
 import sys
-import parse
+from methods.post import parsePostReq
+from logger import Logger
+from response import createResponse
 
+logger = Logger()
 
 def handleReq(rawData, clientAddr):
 
-    data = rawData.decode()
+    data = rawData.decode('ISO-8859-1')
     headers = []
     for i in data.split('\n'):
         headers.append(i)
 
     method = headers[0].split(' ')[0]
-    httpVersion = headers[0].split(' '[2])
+    httpVersion = headers[0].split(' ')[2]
 
     if (method == 'GET'):
         return parse.parseGetReq(headers, clientAddr, rawData)
     elif (method == 'POST'):
-        return parse.parsePostReq(headers, clientAddr, rawData)
+        return parsePostReq(headers, clientAddr, rawData)
     elif (method == 'PUT'):
         return parse.parsePutReq(headers, clientAddr, rawData)
     elif (method == 'DELETE'):
@@ -24,7 +27,8 @@ def handleReq(rawData, clientAddr):
     elif (method == 'HEAD'):
         return parse.parseHeadReq(headers, clientAddr, rawData)
     else:
-        pass
+        logger.serverError(501)
+        return createResponse(0, 501)
 
 def connectionType(data):
     headers = data.split('\n')
@@ -37,13 +41,12 @@ def connectionType(data):
 
 def acceptClient(clientSocket, clientAddr):
 
-    clientSocket.settimeout(10)
+    #clientSocket.settimeout(10)
 
     while True:
         try:
             rawData = clientSocket.recv(65565)
-
-            response = handleReq(rawData, clientAddr)
+            response, res = handleReq(rawData, clientAddr)
 
             # send response
 
@@ -58,6 +61,12 @@ def acceptClient(clientSocket, clientAddr):
     return
 
 
+if __name__ == '__main__':
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind(('', 5002))
+    s.listen(90)
 
-        
+    while True:
+        clisock, addr = s.accept()
+        acceptClient(clisock, addr)
 
