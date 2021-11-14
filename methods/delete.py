@@ -2,27 +2,28 @@ import os
 from logger import Logger
 from response import createResponse
 import pathlib
-from get import *
 
 docRootPath = str(pathlib.Path().absolute()) + "/assets/"
 logger = Logger()
+print(docRootPath)
 
 def parseDeleteReq(headers, client):
-
-    params ={}
+    headerValues ={}
     body = []
     logger.clientAddr = client
 
     for i in headers[1:]:
         try:
+            print(i)
             headerField = i[:i.index(':')]
-            params[headerField] = i[i.index(':') + 2:len(i) - 1]
+            headerValues[headerField] = i[i.index(':') + 2:len(i) - 1]
         except:
             if i != '\r' and i != '\n':
-                body.append()
+                body.append(i)
     
     path = headers[0].split(' ')[1]
     path = docRootPath + path
+    print(path)
 
     if os.path.exists(path):
         if os.access(path, os.W_OK):

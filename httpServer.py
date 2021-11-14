@@ -5,6 +5,7 @@ from methods.post import parsePostReq
 from methods.get import parseGetReq
 from methods.head import parseHeadReq
 from methods.put import parsePutReq
+from methods.delete import parseDeleteReq
 from logger import Logger
 from response import createResponse
 import threading
@@ -32,7 +33,7 @@ def handleReq(rawData, clientAddr):
         elif (method == 'PUT'):
             return parsePutReq(headers, clientAddr, rawData)
         elif (method == 'DELETE'):
-            return parse.parseDeleteReq(headers, clientAddr, rawData)
+            return parseDeleteReq(headers, clientAddr)
         elif (method == 'HEAD'):
             return parseHeadReq(headers, clientAddr)
         else:
@@ -56,20 +57,32 @@ def connectionType(data):
 
 def acceptClient(clientSocket, clientAddr):
 
-    #clientSocket.settimeout(10)
+    clientSocket.settimeout(10)
 
     while True:
         try:
             rawData = clientSocket.recv(65565)
             if not rawData:
                 break
-            response, res = handleReq(rawData, clientAddr)
-            print(response)
-            print(res)
-            clientSocket.send(response.encode('utf-8'))
 
-            if len(res):
-                clientSocket.send(res)
+            data = rawData.decode('ISO-8859-1')        
+            method = data.split('\n')[0].split(' ')[0]
+
+            if method == 'DELETE':
+                response = handleReq(rawData, clientAddr)
+            else:
+                response, res = handleReq(rawData, clientAddr)
+                print(response)
+                print(res)
+            clientSocket.send(response.encode('utf-8'))
+            
+            
+            if method == 'GET' or method == 'POST':
+                try:
+                    if len(res):
+                        clientSocket.send(res)
+                except Exception as e:
+                    logger.serverError(e)
 
             # Close socket if connection type is close
             if (connectionType(rawData.decode()) == "close"):
@@ -86,7 +99,7 @@ if __name__ == '__main__':
     try:
         
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.bind(('', 4010))
+        s.bind(('', 4022))
         s.listen(90)
         threads = []
         while True:
@@ -94,7 +107,7 @@ if __name__ == '__main__':
             t = threading.Thread(target=acceptClient, args=(clisock, addr, ))
             t.start()
             threads.append(t)
-            print(threading.active_count())
+            #print(threading.active_count())
 
             if threading.active_count() > MAX_REQ:
                 t.join()
