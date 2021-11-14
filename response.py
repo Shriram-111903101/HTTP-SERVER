@@ -39,6 +39,8 @@ def getResponse(headers):
     entityHed = ("Content-Type: " + headers['cType'] + "\r\nDate: " + date + 
                 "\r\nContent-Length: " + str(headers['length']) + "\r\nContent-Language: en-US\r\nConnection: keep-alive\r\nAllow: " 
                 + entityHeaders['Allow'] + "\r\n")
+    if 'modified' in headers.keys():
+        entityHed += "Last-Modified: " + str(headers['modified'] + "\r\n")
 
     eTag = headers['eTag']
     if eTag != '':

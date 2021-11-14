@@ -3,7 +3,7 @@ import pathlib
 MAX_REQ = 30
 
 # Default port
-PORT = 5000
+PORT = 5001
 
 absolutePath = str(pathlib.Path().absolute())
 ROOT_PATH =  absolutePath + '/assets/'

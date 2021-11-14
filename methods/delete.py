@@ -5,7 +5,6 @@ import pathlib
 
 docRootPath = str(pathlib.Path().absolute()) + "/assets/"
 logger = Logger()
-print(docRootPath)
 
 def parseDeleteReq(headers, client):
     headerValues ={}
@@ -23,7 +22,6 @@ def parseDeleteReq(headers, client):
     
     path = headers[0].split(' ')[1]
     path = docRootPath + path
-    print(path)
 
     if os.path.exists(path):
         if os.access(path, os.W_OK):

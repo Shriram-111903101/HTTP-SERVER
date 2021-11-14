@@ -65,6 +65,7 @@ def parseBody(encodingType, body, method, data):
                 elif 'Content-Disposition: form-data' in i:
                     if 'filename=' in i:
                         parsedData['isFile'] = True
+                        parsedData['fileType'] = 'text/html'
                         fileName = i[i.index('ename="') + 7:-2]
                         j = data.index(i)
                         headerString = '\n'.join(data[:j+2])

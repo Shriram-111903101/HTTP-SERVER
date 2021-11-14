@@ -81,7 +81,7 @@ class Logger():
                 ' \"' + req[:len(req) - 1] + '\" ' + str(statusCode) + ' ' +
                 str(headers['Content-Length']))
         except:
-            log = 'Bad Request [' + res + ']'
+            log = 'Bad Request [' + str(res) + ']'
 
         self.lock.acquire()
         errorFile.write(log + '\n')

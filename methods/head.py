@@ -4,6 +4,7 @@ import pathlib
 from datetime import *
 from config import mediaTypes
 from response import getResponse
+import time
 
 qualityVal = []
 logger = Logger()
@@ -101,6 +102,7 @@ def parseHeadReq(headers, client):
             path += '.' + cType.split('/')[1]
         file = open(path, 'rb')
         res = file.read()
+        params['modified'] = time.ctime(os.path.getmtime(path))
         eTag = str(os.path.getmtime(path)) + str(len(res))
         length = 0
         try:
@@ -114,7 +116,6 @@ def parseHeadReq(headers, client):
         
         response = getResponse(params)
         logger.createLog(headers[0], response)
-        print(response) 
         return response, ""
     
     except FileNotFoundError:

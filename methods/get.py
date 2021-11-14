@@ -8,6 +8,7 @@ from response import createResponse, getResponse
 from config import entityHeaders
 import gzip
 import zlib
+import time
 
 
 qualityVal = []
@@ -106,6 +107,7 @@ def parseGetReq(headers, client):
             path += '.' + cType.split('/')[1]
         file = open(path, 'rb')
         res = file.read()
+        params['modified'] = time.ctime(os.path.getmtime(path))
         eTag = str(os.path.getmtime(path)) + str(len(res))
         length = 0
         try:

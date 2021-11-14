@@ -9,7 +9,7 @@ from methods.delete import parseDeleteReq
 from logger import Logger
 from response import createResponse
 import threading
-from config import MAX_REQ
+from config import MAX_REQ, PORT
 import time
 sys.path.append(os.path.abspath(os.path.join('methods')))
 
@@ -70,6 +70,7 @@ def acceptClient(clientSocket, clientAddr):
 
             if method == 'DELETE':
                 response = handleReq(rawData, clientAddr)
+                print(response)
             else:
                 response, res = handleReq(rawData, clientAddr)
                 print(response)
@@ -79,17 +80,17 @@ def acceptClient(clientSocket, clientAddr):
             
             if method == 'GET' or method == 'POST':
                 try:
-                    if len(res):
-                        clientSocket.send(res)
+                    clientSocket.send(res)
                 except Exception as e:
                     logger.serverError(e)
+                    pass
 
             # Close socket if connection type is close
             if (connectionType(rawData.decode()) == "close"):
                 clientSocket.close()
                 break
 
-        except clientSocket.timeout:
+        except socket.timeout:
             clientSocket.close()
             break
     return
@@ -97,9 +98,8 @@ def acceptClient(clientSocket, clientAddr):
 
 if __name__ == '__main__':
     try:
-        
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.bind(('', 4022))
+        s.bind(('', PORT))
         s.listen(90)
         threads = []
         while True:
