@@ -4,6 +4,7 @@ import os
 from methods.post import parsePostReq
 from methods.get import parseGetReq
 from methods.head import parseHeadReq
+from methods.put import parsePutReq
 from logger import Logger
 from response import createResponse
 import threading
@@ -29,7 +30,7 @@ def handleReq(rawData, clientAddr):
         elif (method == 'POST'):
             return parsePostReq(headers, clientAddr, rawData)
         elif (method == 'PUT'):
-            return parse.parsePutReq(headers, clientAddr, rawData)
+            return parsePutReq(headers, clientAddr, rawData)
         elif (method == 'DELETE'):
             return parse.parseDeleteReq(headers, clientAddr, rawData)
         elif (method == 'HEAD'):
@@ -69,7 +70,7 @@ def acceptClient(clientSocket, clientAddr):
 
             if len(res):
                 clientSocket.send(res)
-                
+
             # Close socket if connection type is close
             if (connectionType(rawData.decode()) == "close"):
                 clientSocket.close()
@@ -85,7 +86,7 @@ if __name__ == '__main__':
     try:
         
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.bind(('', 4003))
+        s.bind(('', 4010))
         s.listen(90)
         threads = []
         while True:

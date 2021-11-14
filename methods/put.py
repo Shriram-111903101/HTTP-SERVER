@@ -1,18 +1,17 @@
 import os
-from get import *
 import sys
 import json
 sys.path.append(os.path.abspath(os.path.join('..')))
 from response import *
 from logger import Logger
+from config import ROOT_PATH
+import parse
 
-docRootPath = DOCUMENT_ROOT
+docRootPath = ROOT_PATH
 logger = Logger()
 
 def parsePutReq(headers, client, raw = None):
 
-    resource = ''
-    f =''
     logger.clientAddr = client
     headerValues, body = parse.parseHeaders(headers, 'PUT')
     path = headers[0].split(' ')[1]
@@ -23,7 +22,7 @@ def parsePutReq(headers, client, raw = None):
         path = docRootPath + path
 
     if os.path.exists(path):
-        if os.access(path.os.W_OK):
+        if os.access(path, os.W_OK):
             f1 = open(path, 'wb')
             responseStatus = 204
         else:

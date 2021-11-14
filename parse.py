@@ -1,9 +1,10 @@
 
 def parseHeaders(data, method):
-    body = []
-    boundary = ''
-    hdrValues = {}
+    
     if method == 'POST':
+        body = []
+        boundary = ''
+        hdrValues = {}
 
         for i in data[1:]:
             if ':' in i:
@@ -26,7 +27,7 @@ def parseHeaders(data, method):
     elif method == 'PUT':
         hdrValues = {}
         body = []
-        for i in data[1:data]:
+        for i in data[1:]:
             if ':' in i:
                 hdrField = i[:i.index(':')]
                 hdrValues[hdrField] = i[i.index(':') : + 2 : len(i) - 1]
