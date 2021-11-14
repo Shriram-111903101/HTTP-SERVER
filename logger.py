@@ -8,8 +8,6 @@ absolutePath = str(pathlib.Path().absolute())
 accessLog = absolutePath + '/logs/accessLog.txt'
 errorLog = absolutePath + '/logs/errorLog.txt'
 postLog = absolutePath + '/logs/postLog.txt'
-logFormat = 'clientIP [dateTime] request response length'
-logLevel = '-all'
 
 class Logger():
     def __init__(self):

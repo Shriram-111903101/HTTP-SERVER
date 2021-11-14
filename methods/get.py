@@ -13,7 +13,6 @@ import zlib
 qualityVal = []
 logger = Logger()
 docRootPath = str(pathlib.Path().absolute()) + '/assets'
-print(docRootPath)
 
 def contentType(content):
     global qualityVal

@@ -5,12 +5,9 @@ from datetime import *
 from config import mediaTypes
 from response import getResponse
 
-
-
 qualityVal = []
 logger = Logger()
 docRootPath = str(pathlib.Path().absolute()) + '/assets'
-print(docRootPath)
 
 def contentType(content):
     global qualityVal
@@ -26,7 +23,7 @@ def contentType(content):
     return qualityVal
 
 
-def parseGetReq(headers, client):
+def parseHeadReq(headers, client):
     logger.clientAddr = client
     path = headers[0].split(' ')[1]
     headerValues = {}

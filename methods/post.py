@@ -4,7 +4,10 @@ from pathlib import Path
 import parse
 import response
 import os
+import sys
 from logger import Logger
+sys.path.append(os.path.abspath(os.path.join('..')))
+
 
 logger = Logger()
 

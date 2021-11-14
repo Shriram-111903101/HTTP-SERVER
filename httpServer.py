@@ -1,38 +1,48 @@
 import socket
 import sys
+import os
 from methods.post import parsePostReq
 from methods.get import parseGetReq
+from methods.head import parseHeadReq
 from logger import Logger
 from response import createResponse
 import threading
 from config import MAX_REQ
 import time
+sys.path.append(os.path.abspath(os.path.join('methods')))
 
 logger = Logger()
 
 def handleReq(rawData, clientAddr):
+    try:
 
-    data = rawData.decode('ISO-8859-1')
-    headers = []
-    for i in data.split('\n'):
-        headers.append(i)
+        data = rawData.decode('ISO-8859-1')
+        headers = []
+        for i in data.split('\n'):
+            headers.append(i)
 
-    method = headers[0].split(' ')[0]
-    #httpVersion = headers[0].split(' ')[2]
+        method = headers[0].split(' ')[0]
+        #httpVersion = headers[0].split(' ')[2]
 
-    if (method == 'GET'):
-        return parseGetReq(headers, clientAddr)
-    elif (method == 'POST'):
-        return parsePostReq(headers, clientAddr, rawData)
-    elif (method == 'PUT'):
-        return parse.parsePutReq(headers, clientAddr, rawData)
-    elif (method == 'DELETE'):
-        return parse.parseDeleteReq(headers, clientAddr, rawData)
-    elif (method == 'HEAD'):
-        return parse.parseHeadReq(headers, clientAddr, rawData)
-    else:
-        logger.serverError(501)
-        return createResponse(0, 501)
+        if (method == 'GET'):
+            return parseGetReq(headers, clientAddr)
+        elif (method == 'POST'):
+            return parsePostReq(headers, clientAddr, rawData)
+        elif (method == 'PUT'):
+            return parse.parsePutReq(headers, clientAddr, rawData)
+        elif (method == 'DELETE'):
+            return parse.parseDeleteReq(headers, clientAddr, rawData)
+        elif (method == 'HEAD'):
+            return parseHeadReq(headers, clientAddr)
+        else:
+            logger.serverError(501)
+            return createResponse(0, 501)
+
+    except Exception as e:
+        logger.createErrorLog(headers[0], 400)
+        print(e)
+        return createResponse(0, 400)
+
 
 def connectionType(data):
     headers = data.split('\n')
@@ -45,7 +55,7 @@ def connectionType(data):
 
 def acceptClient(clientSocket, clientAddr):
 
-    clientSocket.settimeout(10)
+    #clientSocket.settimeout(10)
 
     while True:
         try:
@@ -56,6 +66,10 @@ def acceptClient(clientSocket, clientAddr):
             print(response)
             print(res)
             clientSocket.send(response.encode('utf-8'))
+
+            if len(res):
+                clientSocket.send(res)
+                
             # Close socket if connection type is close
             if (connectionType(rawData.decode()) == "close"):
                 clientSocket.close()
@@ -71,7 +85,7 @@ if __name__ == '__main__':
     try:
         
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.bind(('', 5014))
+        s.bind(('', 4003))
         s.listen(90)
         threads = []
         while True:
