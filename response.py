@@ -37,7 +37,7 @@ def getResponse(headers):
     status = "HTTP/1.1 " + str(statusCode) + " " + statusCodes[statusCode] + "\r\n"
     server = "Server: http-server\r\n"
     entityHed = ("Content-Type: " + headers['cType'] + "\r\nDate: " + date + 
-                "\r\nContent-Length: " + headers['length'] + + "\r\nContent-Language: en-US\r\nConnection: keep-alive\r\nAllow: " 
+                "\r\nContent-Length: " + str(headers['length']) + "\r\nContent-Language: en-US\r\nConnection: keep-alive\r\nAllow: " 
                 + entityHeaders['Allow'] + "\r\n")
 
     eTag = headers['eTag']

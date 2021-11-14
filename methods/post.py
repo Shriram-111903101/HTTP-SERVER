@@ -37,13 +37,13 @@ def parsePostReq(headers, clientAddr, rawData=None):
                 res = response.createResponse(len(body[0]), 415, body[0], None)
                 logger.createLog(headers[0], res)
                 logger.createErrorLog(headers[0], res)
-                print(res)
+                #print(res)
                 return(res, '')
 
         res = response.createResponse(len(body[0]), responseStatus, None, None)
         logger.createLog(headers[0], res)
         logger.createPostLog(data, headers[0], headerValues, responseStatus)
-        print(res)
+        #print(res)
         return(res, '')
 
     else:
@@ -51,7 +51,7 @@ def parsePostReq(headers, clientAddr, rawData=None):
         res = response.createResponse(len(body[0]), responseStatus, body[0], None)
         logger.createLog(headers[0], res)
         logger.createPostLog(data, headers[0], headerValues, responseStatus)
-        print(res)
+        #print(res)
         return(res, '')
 
 

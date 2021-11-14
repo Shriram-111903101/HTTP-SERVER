@@ -13,6 +13,7 @@ import zlib
 qualityVal = []
 logger = Logger()
 docRootPath = str(pathlib.Path().absolute()) + '/assets'
+print(docRootPath)
 
 def contentType(content):
     global qualityVal
@@ -23,7 +24,7 @@ def contentType(content):
         if (len(j) > 1):
             qualityVal.append(j[0], float(j[1].split('=')[1]))
     if (qualityVal == []):
-        qualityVal.append(content[0], 1.0)
+        qualityVal.append((content[0], 1.0))
     qualityVal.sort(key=lambda x: x[1], reverse=True)
     return qualityVal
 
@@ -32,11 +33,13 @@ def parseGetReq(headers, client):
     logger.clientAddr = client
     path = headers[0].split(' ')[1]
     headerValues = {}
+    #print(headers)
     for i in headers[1:]:
         try:
             headerField = i[:i.index(':')]
             if(headerField == 'Accept'):
                 contentType(i[i.index(':') + 2:len(i) - 1])
+                
             headerValues[headerField] = i[i.index(':') + 2:len(i) - 1]
         except:
             pass
@@ -124,7 +127,7 @@ def parseGetReq(headers, client):
         response = getResponse(params)
 
         if ('Accept-Encoding' in headerValues.keys()):
-            if params['Accept-Encoding'] == 'gzip':
+            if headerValues['Accept-Encoding'] == 'gzip':
                 temp = ''
                 for i in response.split('\r\n'):
                     if 'Content-Length' in i:
@@ -133,10 +136,10 @@ def parseGetReq(headers, client):
                         temp += i + '\r\n'
                 res = gzip.compress(res)
                 temp = (temp[:len(temp) - 4] + 'Content-Length: ' + 
-                            len(res) + '\r\nAccept-Encoding: gzip\r\n\r\n')
+                            str(len(res)) + '\r\nAccept-Encoding: gzip\r\n\r\n')
                 response = temp
 
-            elif params['Accept-Encoding'] == 'deflate':
+            elif headerValues['Accept-Encoding'] == 'deflate':
                 temp = ''
                 for i in response.split('\r\n'):
                     if 'Content-Length' in i:
@@ -145,10 +148,10 @@ def parseGetReq(headers, client):
                         temp += i + '\r\n'
                 res = zlib.compress(res)
                 temp = (temp[:len(temp) - 4] + 'Content-Length: ' + 
-                            len(res) + '\r\nAccept-Encoding: deflate\r\n\r\n')
+                            str(len(res)) + '\r\nAccept-Encoding: deflate\r\n\r\n')
                 response = temp
 
-            elif params['Accept-Encoding'] == 'br':
+            elif headerValues['Accept-Encoding'] == 'br':
                 temp = ''
                 for i in response.split('\r\n'):
                     if 'Content-Length' in i:
@@ -157,7 +160,7 @@ def parseGetReq(headers, client):
                         temp += i + '\r\n'
 
                 temp = (temp[:len(temp) - 4] + 'Content-Length: ' + 
-                            len(res) + '\r\nAccept-Encoding: br\r\n\r\n')
+                            str(len(res)) + '\r\nAccept-Encoding: br\r\n\r\n')
                 response = temp
 
         if 'Accept-Ranges' in headerValues.keys():

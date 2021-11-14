@@ -100,5 +100,5 @@ class Logger():
             ' ' + date.strftime('%b') + ' ' + str(date.year)) + time
 
         file = open(errorLog, 'a')
-        file.write(date + e + '\n')
+        file.write(date + str(e) + '\n')
         file.close

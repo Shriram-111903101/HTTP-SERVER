@@ -1,8 +1,12 @@
 import socket
 import sys
 from methods.post import parsePostReq
+from methods.get import parseGetReq
 from logger import Logger
 from response import createResponse
+import threading
+from config import MAX_REQ
+import time
 
 logger = Logger()
 
@@ -14,10 +18,10 @@ def handleReq(rawData, clientAddr):
         headers.append(i)
 
     method = headers[0].split(' ')[0]
-    httpVersion = headers[0].split(' ')[2]
+    #httpVersion = headers[0].split(' ')[2]
 
     if (method == 'GET'):
-        return parse.parseGetReq(headers, clientAddr, rawData)
+        return parseGetReq(headers, clientAddr)
     elif (method == 'POST'):
         return parsePostReq(headers, clientAddr, rawData)
     elif (method == 'PUT'):
@@ -41,15 +45,17 @@ def connectionType(data):
 
 def acceptClient(clientSocket, clientAddr):
 
-    #clientSocket.settimeout(10)
+    clientSocket.settimeout(10)
 
     while True:
         try:
             rawData = clientSocket.recv(65565)
+            if not rawData:
+                break
             response, res = handleReq(rawData, clientAddr)
-
-            # send response
-
+            print(response)
+            print(res)
+            clientSocket.send(response.encode('utf-8'))
             # Close socket if connection type is close
             if (connectionType(rawData.decode()) == "close"):
                 clientSocket.close()
@@ -62,11 +68,29 @@ def acceptClient(clientSocket, clientAddr):
 
 
 if __name__ == '__main__':
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.bind(('', 5002))
-    s.listen(90)
+    try:
+        
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.bind(('', 5014))
+        s.listen(90)
+        threads = []
+        while True:
+            clisock, addr = s.accept()
+            t = threading.Thread(target=acceptClient, args=(clisock, addr, ))
+            t.start()
+            threads.append(t)
+            print(threading.active_count())
 
-    while True:
-        clisock, addr = s.accept()
-        acceptClient(clisock, addr)
+            if threading.active_count() > MAX_REQ:
+                t.join()
+                print('Limit exceeded. Wait 5 sec')
+                time.sleep(5)
+
+        for i in threads:
+            i.join()
+
+    except Exception as e:
+        print('Internal Error')
+        logger.serverError(e)
+        sys.exit(1)
 
