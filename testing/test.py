@@ -133,16 +133,12 @@ if __name__ == "__main__":
         if (i == '-get'):
             Tester.testGet()
         if (i == '-head'):
-            print('Testing Head Method')
             Tester.testHead()
         if (i == '-delete'):
-            print('Testing Delete Method')
             Tester.testDelete()
         if (i == '-post'):
-            print('Testing Post Method')
             Tester.testPost()
         if (i == '-put'):
-            print('Testing Put Method')
             Tester.testPut()
         if (i == '-all'):
             Tester.testAll()

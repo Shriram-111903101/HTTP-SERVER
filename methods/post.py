@@ -16,7 +16,6 @@ def parsePostReq(headers, clientAddr, rawData=None):
     resourceLength = len(rawData)
     headerValues, body = parse.parseHeaders(headers, 'POST')
     path = headers[0].split(' ')[1]
-    print(headers)
     
     if path == '/':
         path = ROOT_PATH

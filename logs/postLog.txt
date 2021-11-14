@@ -307,3 +307,39 @@
     "filename": "post.txt",
     "fileData": "b'India is not my Country!!'"
 }
+('127.0.0.1', 52704) [Sun, 14 Nov 2021 20:04:38 IST]  "POST / HTTP/1.1" 204 30{
+    "name": "Tony",
+    "surname": "Stark",
+    "age": "51"
+}
+('127.0.0.1', 52706) [Sun, 14 Nov 2021 20:04:38 IST]  "POST /post.txt HTTP/1.1" 204 441{
+    "isFile": true,
+    "fileType": "text/html",
+    "headerLength": 624,
+    "filename": "post.txt",
+    "fileData": "b'India is my beloved Country!!'"
+}
+('127.0.0.1', 52960) [Sun, 14 Nov 2021 20:10:04 IST]  "POST / HTTP/1.1" 204 30{
+    "name": "Tony",
+    "surname": "Stark",
+    "age": "51"
+}
+('127.0.0.1', 52962) [Sun, 14 Nov 2021 20:10:04 IST]  "POST /post.txt HTTP/1.1" 204 441{
+    "isFile": true,
+    "fileType": "text/html",
+    "headerLength": 624,
+    "filename": "post.txt",
+    "fileData": "b'India is my beloved Country!!'"
+}
+('127.0.0.1', 53068) [Sun, 14 Nov 2021 20:12:00 IST]  "POST / HTTP/1.1" 204 30{
+    "name": "Tony",
+    "surname": "Stark",
+    "age": "51"
+}
+('127.0.0.1', 53070) [Sun, 14 Nov 2021 20:12:00 IST]  "POST /post.txt HTTP/1.1" 204 441{
+    "isFile": true,
+    "fileType": "text/html",
+    "headerLength": 624,
+    "filename": "post.txt",
+    "fileData": "b'India is my beloved Country!!'"
+}
