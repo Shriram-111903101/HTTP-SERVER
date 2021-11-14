@@ -277,3 +277,12 @@ Sun, 14 Nov 2021 Nov:42:06 GMTa bytes-like object is required, not 'str'
 ('127.0.0.1', 53088) [14/November/2021:20:12:16 GMT]  "GET / HTTP/1.1" 406 0
 Sun, 14 Nov 2021 Nov:42:16 GMTa bytes-like object is required, not 'str'
 ('127.0.0.1', 53094) [14/November/2021:20:12:26 GMT]  "HEAD / HTTP/1.1" 404 0
+('127.0.0.1', 54716) [14/November/2021:20:38:40 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:08:40 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 54724) [14/November/2021:20:38:50 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:08:50 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 54734) [14/November/2021:20:39:01 GMT]  "HEAD / HTTP/1.1" 404 0
+('127.0.0.1', 54742) [14/November/2021:20:39:11 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:09:21 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:09:21 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 54752) [14/November/2021:20:39:21 GMT]  "DELETE /remove.txt HTTP/1.1" 404 0

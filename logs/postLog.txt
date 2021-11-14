@@ -343,3 +343,15 @@
     "filename": "post.txt",
     "fileData": "b'India is my beloved Country!!'"
 }
+('127.0.0.1', 54746) [Sun, 14 Nov 2021 20:39:21 IST]  "POST / HTTP/1.1" 204 30{
+    "name": "Tony",
+    "surname": "Stark",
+    "age": "51"
+}
+('127.0.0.1', 54748) [Sun, 14 Nov 2021 20:39:21 IST]  "POST /post.txt HTTP/1.1" 204 441{
+    "isFile": true,
+    "fileType": "text/html",
+    "headerLength": 624,
+    "filename": "post.txt",
+    "fileData": "b'India is my beloved Country!!'"
+}

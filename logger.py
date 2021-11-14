@@ -3,11 +3,13 @@ from datetime import datetime, timedelta
 import pathlib
 import json
 import pytz
+from config import ACCESSLOG, ERRORLOG, POSTLOG
+
 
 absolutePath = str(pathlib.Path().absolute())
-accessLog = absolutePath + '/logs/accessLog.txt'
-errorLog = absolutePath + '/logs/errorLog.txt'
-postLog = absolutePath + '/logs/postLog.txt'
+accessLog = ACCESSLOG
+errorLog = ERRORLOG
+postLog = POSTLOG
 
 class Logger():
     def __init__(self):

@@ -1,3 +1,4 @@
+from abc import ABCMeta
 import pathlib
 # Maximum number of threads
 MAX_REQ = 30
@@ -7,6 +8,9 @@ PORT = 5005
 
 absolutePath = str(pathlib.Path().absolute())
 ROOT_PATH =  absolutePath + '/assets/'
+ACCESSLOG = absolutePath + '/logs/accessLog.txt'
+ERRORLOG = absolutePath + '/logs/errorLog.txt'
+POSTLOG = absolutePath + '/logs/postLog.txt'
 
 # Status Codes
 statusCodes = {

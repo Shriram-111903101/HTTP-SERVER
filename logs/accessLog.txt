@@ -305,3 +305,15 @@
 ('127.0.0.1', 53086) [14/November/2021:20:12:16 GMT]  "GET /index.html HTTP/1.1" 200 109
 ('127.0.0.1', 53094) [14/November/2021:20:12:26 GMT]  "HEAD / HTTP/1.1" 404 0
 ('127.0.0.1', 53100) [14/November/2021:20:12:36 GMT]  "GET /login.html HTTP/1.1" 200 20
+('127.0.0.1', 54712) [14/November/2021:20:38:40 GMT]  "GET /login.html HTTP/1.1" 200 81
+('127.0.0.1', 54714) [14/November/2021:20:38:40 GMT]  "GET /image.png HTTP/1.1" 200 19888
+('127.0.0.1', 54716) [14/November/2021:20:38:40 GMT]  "GET /unknown HTTP/1.1" 404 0
+('127.0.0.1', 54722) [14/November/2021:20:38:50 GMT]  "GET /index.html HTTP/1.1" 200 109
+('127.0.0.1', 54734) [14/November/2021:20:39:01 GMT]  "HEAD / HTTP/1.1" 404 0
+('127.0.0.1', 54736) [14/November/2021:20:39:11 GMT]  "GET /login.html HTTP/1.1" 200 20
+('127.0.0.1', 54738) [14/November/2021:20:39:11 GMT]  "HEAD /image.png HTTP/1.1" 200 19888
+('127.0.0.1', 54740) [14/November/2021:20:39:11 GMT]  "HEAD /login.html HTTP/1.1" 200 81
+('127.0.0.1', 54742) [14/November/2021:20:39:11 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 54746) [14/November/2021:20:39:21 GMT]  "POST / HTTP/1.1" 204 30
+('127.0.0.1', 54748) [14/November/2021:20:39:21 GMT]  "POST /post.txt HTTP/1.1" 204 35
+('127.0.0.1', 54750) [14/November/2021:20:39:21 GMT]  "PUT /put.txt HTTP/1.1" 204 0
