@@ -1,0 +1,279 @@
+Sun, 14 Nov 2021 Nov:00:35 GMT[Errno 98] Address already in use
+Sun, 14 Nov 2021 Nov:01:23 GMT[Errno 98] Address already in use
+Sun, 14 Nov 2021 Nov:01:47 GMT[Errno 98] Address already in use
+Sun, 14 Nov 2021 Nov:02:09 GMT[Errno 98] Address already in use
+Sun, 14 Nov 2021 Nov:03:40 GMT[Errno 98] Address already in use
+Sun, 14 Nov 2021 Nov:04:19 GMT[Errno 98] Address already in use
+Sun, 14 Nov 2021 Nov:05:40 GMT[Errno 98] Address already in use
+Sun, 14 Nov 2021 Nov:07:16 GMT[Errno 98] Address already in use
+Sun, 14 Nov 2021 Nov:08:41 GMT[Errno 98] Address already in use
+Sun, 14 Nov 2021 Nov:09:22 GMT[Errno 98] Address already in use
+('127.0.0.1', 59334) [14/November/2021:16:04:17 GMT]  "GET /1.png HTTP/1.1" 404 0
+('127.0.0.1', 37784) [14/November/2021:16:07:40 GMT]  "GET /1.png HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:37:40 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 37924) [14/November/2021:16:09:21 GMT]  "GET /1.png HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:39:21 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 37938) [14/November/2021:16:09:48 GMT]  "GET /index.html HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:39:48 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 38098) [14/November/2021:16:13:02 GMT]  "GET /1.png HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:43:02 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 45812) [14/November/2021:16:17:49 GMT]  "GET /1.png HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:47:49 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 60464) [14/November/2021:16:20:53 GMT]  "GET /1.png HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:50:53 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 60472) [14/November/2021:16:21:03 GMT]  "GET /2.html HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:51:03 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 60478) [14/November/2021:16:21:13 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:51:13 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 60494) [14/November/2021:16:21:23 GMT]  "GET /notFound HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:51:23 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 60502) [14/November/2021:16:21:33 GMT]  "GET / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:51:33 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 60760) [14/November/2021:16:24:59 GMT]  "GET /1.png HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:54:59 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 60776) [14/November/2021:16:25:09 GMT]  "GET /2.html HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:55:09 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 60786) [14/November/2021:16:25:19 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:55:19 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 60792) [14/November/2021:16:25:29 GMT]  "GET /notFound HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:55:29 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 60798) [14/November/2021:16:25:39 GMT]  "GET / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:55:39 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 60804) [14/November/2021:16:25:49 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:55:49 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 60812) [14/November/2021:16:25:59 GMT]  "HEAD / HTTP/1.1" 404 0
+('127.0.0.1', 60830) [14/November/2021:16:26:09 GMT]  "GET / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:56:09 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 32920) [14/November/2021:16:30:56 GMT]  "GET /1.png HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:00:56 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 32926) [14/November/2021:16:31:06 GMT]  "GET /2.html HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:01:06 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 32932) [14/November/2021:16:31:16 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:01:16 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 32938) [14/November/2021:16:31:26 GMT]  "GET /notFound HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:01:26 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 32944) [14/November/2021:16:31:36 GMT]  "GET / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:01:36 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 32950) [14/November/2021:16:31:46 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:01:46 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 32956) [14/November/2021:16:31:56 GMT]  "HEAD / HTTP/1.1" 404 0
+('127.0.0.1', 32962) [14/November/2021:16:32:06 GMT]  "GET / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:02:06 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 33072) [14/November/2021:16:33:13 GMT]  "GET /1.png HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:03:13 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 33078) [14/November/2021:16:33:23 GMT]  "GET /2.html HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:03:23 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 33092) [14/November/2021:16:33:33 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:03:33 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 33102) [14/November/2021:16:33:43 GMT]  "GET /notFound HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:03:43 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 33110) [14/November/2021:16:33:53 GMT]  "GET / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:03:53 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 33116) [14/November/2021:16:34:03 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:04:03 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 33122) [14/November/2021:16:34:13 GMT]  "HEAD / HTTP/1.1" 404 0
+('127.0.0.1', 33198) [14/November/2021:16:35:35 GMT]  "GET /1.png HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:05:35 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 33242) [14/November/2021:16:36:07 GMT]  "GET /1.png HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:06:07 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 33320) [14/November/2021:16:37:05 GMT]  "GET /1.png HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:07:05 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 33332) [14/November/2021:16:37:15 GMT]  "GET /2.html HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:07:15 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 33342) [14/November/2021:16:37:25 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:07:25 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 33350) [14/November/2021:16:37:35 GMT]  "GET /notFound HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:07:35 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 35128) [14/November/2021:16:53:51 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:23:51 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 35174) [14/November/2021:16:54:24 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:24:24 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 35340) [14/November/2021:16:56:09 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:26:09 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 35926) [14/November/2021:17:06:28 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 45696) [14/November/2021:17:15:29 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:45:29 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 45790) [14/November/2021:17:16:57 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+Bad Request [400]
+('127.0.0.1', 53524) [14/November/2021:17:22:11 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 38434) [14/November/2021:17:23:53 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:55:13 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:57:03 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:58:00 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:01:55 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:02:37 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:03:21 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:05:07 GMT[Errno 98] Address already in use
+Sun, 14 Nov 2021 Nov:08:21 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:09:02 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:11:02 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:11:58 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:12:10 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:14:17 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:19:31 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:20:03 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:21:27 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:24:39 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:25:59 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:26:51 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:27:30 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:28:13 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:33:47 GMTa bytes-like object is required, not 'str'
+Bad Request [400]
+Sun, 14 Nov 2021 Nov:44:59 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:44:59 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:48:48 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:48:48 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:49:04 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:49:04 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:50:38 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:50:38 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:51:13 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:51:13 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:51:40 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:51:40 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:52:15 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:52:15 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:52:43 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:52:43 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 54406) [14/November/2021:18:30:14 GMT]  "DELETE /delete.txt HTTP/1.1" 404 0
+('127.0.0.1', 50766) [14/November/2021:18:46:32 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:16:32 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 50778) [14/November/2021:18:46:42 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:16:42 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 50898) [14/November/2021:18:48:10 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:18:10 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 50932) [14/November/2021:18:48:20 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:18:20 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 50948) [14/November/2021:18:48:30 GMT]  "HEAD / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:18:50 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:18:50 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 51010) [14/November/2021:18:48:50 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 51026) [14/November/2021:18:49:00 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 38382) [14/November/2021:18:50:44 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:20:44 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 38390) [14/November/2021:18:50:54 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:20:54 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 38396) [14/November/2021:18:51:04 GMT]  "HEAD / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:21:24 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:21:24 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 38418) [14/November/2021:18:51:24 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 38432) [14/November/2021:18:51:34 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 39096) [14/November/2021:19:00:49 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:30:49 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 39104) [14/November/2021:19:00:59 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:30:59 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 39116) [14/November/2021:19:01:09 GMT]  "HEAD / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:31:19 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:31:19 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 39132) [14/November/2021:19:01:19 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 39174) [14/November/2021:19:01:29 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 39878) [14/November/2021:19:09:22 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:39:22 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 39952) [14/November/2021:19:10:09 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:40:09 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 40122) [14/November/2021:19:12:24 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:42:24 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 40138) [14/November/2021:19:12:34 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:42:34 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 40144) [14/November/2021:19:12:44 GMT]  "HEAD / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:42:54 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:42:54 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 40160) [14/November/2021:19:12:54 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 40174) [14/November/2021:19:13:04 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 40254) [14/November/2021:19:13:59 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:43:59 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 40262) [14/November/2021:19:14:09 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:44:09 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 40274) [14/November/2021:19:14:19 GMT]  "HEAD / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:44:29 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:44:29 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 40290) [14/November/2021:19:14:29 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 40298) [14/November/2021:19:14:39 GMT]  "DELETE /remove.txt HTTP/1.1" 404 0
+('127.0.0.1', 40838) [14/November/2021:19:18:27 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:48:27 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 40850) [14/November/2021:19:18:37 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:48:37 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 40924) [14/November/2021:19:19:33 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:49:33 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 41166) [14/November/2021:19:20:50 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:50:50 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 41182) [14/November/2021:19:21:00 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:51:00 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 41194) [14/November/2021:19:21:10 GMT]  "HEAD / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:51:20 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:51:20 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 41214) [14/November/2021:19:21:20 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 41224) [14/November/2021:19:21:30 GMT]  "DELETE /remove.txt HTTP/1.1" 404 0
+('127.0.0.1', 41322) [14/November/2021:19:22:40 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:52:40 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 41330) [14/November/2021:19:22:50 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:52:50 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 41342) [14/November/2021:19:23:00 GMT]  "HEAD / HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:53:10 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:53:10 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 41360) [14/November/2021:19:23:10 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+('127.0.0.1', 41388) [14/November/2021:19:23:20 GMT]  "DELETE /remove.txt HTTP/1.1" 404 0
+('127.0.0.1', 41616) [14/November/2021:19:26:47 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:56:47 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 41628) [14/November/2021:19:26:57 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:56:57 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 41638) [14/November/2021:19:27:07 GMT]  "HEAD / HTTP/1.1" 404 0
+('127.0.0.1', 41650) [14/November/2021:19:27:17 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:57:27 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:57:27 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 41662) [14/November/2021:19:27:27 GMT]  "DELETE /remove.txt HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:12:49 GMT[Errno 98] Address already in use
+Sun, 14 Nov 2021 Nov:16:26 GMT[Errno 98] Address already in use
+('127.0.0.1', 58504) [14/November/2021:19:49:57 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:19:57 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 58516) [14/November/2021:19:50:07 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:20:07 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 58526) [14/November/2021:19:50:17 GMT]  "HEAD / HTTP/1.1" 404 0
+('127.0.0.1', 58538) [14/November/2021:19:50:27 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+Bad Request [400]
+('127.0.0.1', 58688) [14/November/2021:19:53:29 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:23:29 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 58700) [14/November/2021:19:53:39 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:23:39 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 58710) [14/November/2021:19:53:49 GMT]  "HEAD / HTTP/1.1" 404 0
+('127.0.0.1', 58726) [14/November/2021:19:53:59 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:24:09 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:24:09 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 58738) [14/November/2021:19:54:09 GMT]  "DELETE /remove.txt HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:32:46 GMT[Errno 98] Address already in use
+('127.0.0.1', 52672) [14/November/2021:20:03:58 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:33:58 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 52680) [14/November/2021:20:04:08 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:34:08 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 52686) [14/November/2021:20:04:18 GMT]  "HEAD / HTTP/1.1" 404 0
+('127.0.0.1', 52698) [14/November/2021:20:04:28 GMT]  "HEAD /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:34:38 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:34:38 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 52710) [14/November/2021:20:04:38 GMT]  "DELETE /remove.txt HTTP/1.1" 404 0
+('127.0.0.1', 52716) [14/November/2021:20:04:49 GMT]  "DELETE /remove.txt HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:40:04 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:40:04 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:42:00 GMTa bytes-like object is required, not 'str'
+Sun, 14 Nov 2021 Nov:42:00 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 53078) [14/November/2021:20:12:06 GMT]  "GET /unknown HTTP/1.1" 404 0
+Sun, 14 Nov 2021 Nov:42:06 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 53088) [14/November/2021:20:12:16 GMT]  "GET / HTTP/1.1" 406 0
+Sun, 14 Nov 2021 Nov:42:16 GMTa bytes-like object is required, not 'str'
+('127.0.0.1', 53094) [14/November/2021:20:12:26 GMT]  "HEAD / HTTP/1.1" 404 0
